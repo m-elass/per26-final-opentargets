@@ -3,6 +3,7 @@
 **Autor:** Mohamed Elassouti
 **Repositorio:** [per26-final-opentargets](https://github.com/m-elass/per26-final-opentargets.git)
 **Asignatura:** Programación en Entornos de Red (PER)
+![Tu cuaderno](peropentargets.png)
 
 Servidor HTTP en Python (sin frameworks) que consulta dianas terapéuticas
 y enfermedades de la plataforma [Open Targets](https://platform.opentargets.org/),
