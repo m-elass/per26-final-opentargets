@@ -1,0 +1,28 @@
+# Bytecode y caches de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Fichero generado por la cache de la API durante el desarrollo
+# (lo regenera el servidor solo, no hace falta versionarlo)
+datos.json
+
+# Coverage / testing
+.coverage
+htmlcov/
+.pytest_cache/

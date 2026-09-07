@@ -1,0 +1,37 @@
+# .gitlab-ci.yml
+# Configuracion de Integracion Continua en GitLab.
+# En cada push, GitLab arrancara un contenedor con Python y ejecutara
+# nuestros tests automaticamente. Si alguno falla, el pipeline se marca
+# en rojo y nos avisa.
+
+# Imagen base: Python oficial. Slim para que tarde menos.
+image: python:3.11-slim
+
+# Cache de paquetes pip entre ejecuciones (para que sea mas rapido)
+cache:
+  paths:
+    - .cache/pip/
+
+# Variables comunes
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+# Fases del pipeline (orden de ejecucion)
+stages:
+  - test
+
+# Paso unico: lanzar la bateria de pruebas unitarias
+unittest:
+  stage: test
+  before_script:
+    # solo necesito requests para que data1.py importe sin error
+    # (los tests no lo usan, pero el import lo necesita)
+    - pip install --quiet requests
+  script:
+    - echo "Lanzando bateria de tests..."
+    - python -m unittest unittests.py -v
+  # tambien ejecuto en merge requests
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH

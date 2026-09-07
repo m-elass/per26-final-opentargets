@@ -1,0 +1,106 @@
+{
+  "data": {
+    "target": {
+      "id": "ENSG00000141510",
+      "approvedSymbol": "TP53",
+      "biotype": "protein_coding",
+      "tractability": [
+        { "label": "Approved Drug", "modality": "SM", "value": false },
+        { "label": "Advanced Clinical", "modality": "SM", "value": true },
+        { "label": "Phase 1 Clinical", "modality": "SM", "value": true },
+        { "label": "Structure with Ligand", "modality": "SM", "value": true }
+      ],
+      "associatedDiseases": {
+        "rows": [
+          {
+            "disease": {
+              "id": "EFO_0000305",
+              "name": "breast carcinoma",
+              "evidences": {
+                "rows": [
+                  { "id": "ev_tp53_brca_1", "score": 0.92, "datatypeId": "genetic_association", "datasourceId": "ot_genetics_portal" },
+                  { "id": "ev_tp53_brca_2", "score": 0.85, "datatypeId": "literature", "datasourceId": "europepmc" },
+                  { "id": "ev_tp53_brca_3", "score": 0.78, "datatypeId": "known_drug", "datasourceId": "chembl" },
+                  { "id": "ev_tp53_brca_4", "score": 0.81, "datatypeId": "somatic_mutation", "datasourceId": "intogen" }
+                ]
+              }
+            }
+          },
+          {
+            "disease": {
+              "id": "EFO_0001071",
+              "name": "lung carcinoma",
+              "evidences": {
+                "rows": [
+                  { "id": "ev_tp53_lung_1", "score": 0.88, "datatypeId": "genetic_association", "datasourceId": "eva" },
+                  { "id": "ev_tp53_lung_2", "score": 0.71, "datatypeId": "affected_pathway", "datasourceId": "reactome" },
+                  { "id": "ev_tp53_lung_3", "score": 0.64, "datatypeId": "literature", "datasourceId": "europepmc" }
+                ]
+              }
+            }
+          },
+          {
+            "disease": {
+              "id": "MONDO_0004975",
+              "name": "Alzheimer disease",
+              "evidences": {
+                "rows": [
+                  { "id": "ev_tp53_alz_1", "score": 0.45, "datatypeId": "literature", "datasourceId": "europepmc" },
+                  { "id": "ev_tp53_alz_2", "score": 0.38, "datatypeId": "animal_model", "datasourceId": "impc" }
+                ]
+              }
+            }
+          },
+          {
+            "disease": {
+              "id": "EFO_0000685",
+              "name": "rheumatoid arthritis",
+              "evidences": {
+                "rows": [
+                  { "id": "ev_tp53_ra_1", "score": 0.62, "datatypeId": "genetic_association", "datasourceId": "gwas_catalog" },
+                  { "id": "ev_tp53_ra_2", "score": 0.55, "datatypeId": "animal_model", "datasourceId": "impc" }
+                ]
+              }
+            }
+          },
+          {
+            "disease": {
+              "id": "EFO_0000349",
+              "name": "clear cell renal carcinoma",
+              "evidences": {
+                "rows": [
+                  { "id": "ev_tp53_ccrcc_1", "score": 0.74, "datatypeId": "somatic_mutation", "datasourceId": "intogen" },
+                  { "id": "ev_tp53_ccrcc_2", "score": 0.68, "datatypeId": "literature", "datasourceId": "europepmc" }
+                ]
+              }
+            }
+          },
+          {
+            "disease": {
+              "id": "EFO_0000220",
+              "name": "acute lymphoblastic leukemia",
+              "evidences": {
+                "rows": [
+                  { "id": "ev_tp53_all_1", "score": 0.83, "datatypeId": "genetic_association", "datasourceId": "ot_genetics_portal" },
+                  { "id": "ev_tp53_all_2", "score": 0.77, "datatypeId": "known_drug", "datasourceId": "chembl" }
+                ]
+              }
+            }
+          },
+          {
+            "disease": {
+              "id": "Orphanet_99861",
+              "name": "Li-Fraumeni syndrome",
+              "evidences": {
+                "rows": [
+                  { "id": "ev_tp53_lfs_1", "score": 0.95, "datatypeId": "genetic_association", "datasourceId": "eva" },
+                  { "id": "ev_tp53_lfs_2", "score": 0.89, "datatypeId": "literature", "datasourceId": "europepmc" }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

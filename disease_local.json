@@ -1,0 +1,28 @@
+{
+  "data": {
+    "disease": {
+      "id": "EFO_0000349",
+      "name": "clear cell renal carcinoma",
+      "associatedTargets": {
+        "count": 8141,
+        "rows": [
+          { "target": { "id": "ENSG00000134086", "approvedSymbol": "VHL", "biotype": "protein_coding", "tractability": [{"label": "Approved Drug", "modality": "SM", "value": true}] }, "score": 0.6507863432260458 },
+          { "target": { "id": "ENSG00000163939", "approvedSymbol": "PBRM1", "biotype": "protein_coding", "tractability": [] }, "score": 0.6340475680055725 },
+          { "target": { "id": "ENSG00000126012", "approvedSymbol": "KDM5C", "biotype": "protein_coding", "tractability": [] }, "score": 0.6173398717495897 },
+          { "target": { "id": "ENSG00000163930", "approvedSymbol": "BAP1", "biotype": "protein_coding", "tractability": [] }, "score": 0.6074515807613238 },
+          { "target": { "id": "ENSG00000181555", "approvedSymbol": "SETD2", "biotype": "protein_coding", "tractability": [] }, "score": 0.598222469257382 },
+          { "target": { "id": "ENSG00000198793", "approvedSymbol": "MTOR", "biotype": "protein_coding", "tractability": [{"label": "Approved Drug", "modality": "SM", "value": true}] }, "score": 0.522835581205206 },
+          { "target": { "id": "ENSG00000116016", "approvedSymbol": "EPAS1", "biotype": "protein_coding", "tractability": [] }, "score": 0.5221059116307496 },
+          { "target": { "id": "ENSG00000128604", "approvedSymbol": "IRF5", "biotype": "protein_coding", "tractability": [] }, "score": 0.488416301443142 },
+          { "target": { "id": "ENSG00000135100", "approvedSymbol": "HNF1A", "biotype": "protein_coding", "tractability": [] }, "score": 0.48606033608892996 },
+          { "target": { "id": "ENSG00000141510", "approvedSymbol": "TP53", "biotype": "protein_coding", "tractability": [{"label": "Advanced Clinical", "modality": "SM", "value": true}] }, "score": 0.4854350783667385 },
+          { "target": { "id": "ENSG00000275410", "approvedSymbol": "HNF1B", "biotype": "protein_coding", "tractability": [] }, "score": 0.485124076463092 },
+          { "target": { "id": "ENSG00000142208", "approvedSymbol": "AKT1", "biotype": "protein_coding", "tractability": [{"label": "Approved Drug", "modality": "SM", "value": true}] }, "score": 0.4809203903626653 },
+          { "target": { "id": "ENSG00000171862", "approvedSymbol": "PTEN", "biotype": "protein_coding", "tractability": [] }, "score": 0.4762236250851412 },
+          { "target": { "id": "ENSG00000037280", "approvedSymbol": "FLT4", "biotype": "protein_coding", "tractability": [{"label": "Approved Drug", "modality": "SM", "value": true}] }, "score": 0.4563560986590906 },
+          { "target": { "id": "ENSG00000128052", "approvedSymbol": "KDR", "biotype": "protein_coding", "tractability": [{"label": "Approved Drug", "modality": "SM", "value": true}] }, "score": 0.4462082778734143 }
+        ]
+      }
+    }
+  }
+}
