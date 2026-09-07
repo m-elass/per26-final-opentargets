@@ -1,7 +1,7 @@
 # Servidor de Consulta de Open Targets
 
 **Autor:** Mohamed Elassouti
-**Repositorio:** [per26-final-opentargets]((https://github.com/m-elass/per26-final-opentargets.git))
+**Repositorio:** [per26-final-opentargets](https://gitlab.eif.urjc.es/melass)
 **Asignatura:** Programación en Entornos de Red (PER)
 
 Servidor HTTP en Python (sin frameworks) que consulta dianas terapéuticas
