@@ -1,37 +1,37 @@
-# .gitlab-ci.yml
-# Configuracion de Integracion Continua en GitLab.
-# En cada push, GitLab arrancara un contenedor con Python y ejecutara
-# nuestros tests automaticamente. Si alguno falla, el pipeline se marca
-# en rojo y nos avisa.
+# Guarda este archivo en per26-final-opentargets como:
+#   .github/workflows/tests.yml
+#
+# Sustituye a .gitlab-ci.yml, que en GitHub no hace absolutamente nada.
+# A partir del primer push te sale una marca verde junto a cada commit y puedes
+# poner la insignia en el README. Para un repositorio de estudiante, ver
+# "42 tests passing" en verde vale más que tres párrafos explicando que hay tests.
 
-# Imagen base: Python oficial. Slim para que tarde menos.
-image: python:3.11-slim
+name: tests
 
-# Cache de paquetes pip entre ejecuciones (para que sea mas rapido)
-cache:
-  paths:
-    - .cache/pip/
+on:
+  push:
+    branches: [main]
+  pull_request:
 
-# Variables comunes
-variables:
-  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-# Fases del pipeline (orden de ejecucion)
-stages:
-  - test
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
 
-# Paso unico: lanzar la bateria de pruebas unitarias
-unittest:
-  stage: test
-  before_script:
-    # solo necesito requests para que data1.py importe sin error
-    # (los tests no lo usan, pero el import lo necesita)
-    - pip install --quiet requests
-  script:
-    - echo "Lanzando bateria de tests..."
-    - python -m unittest unittests.py -v
-  # tambien ejecuto en merge requests
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "push"
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-    - if: $CI_COMMIT_BRANCH
+      # requests solo hace falta para que data1.py se importe sin error;
+      # las pruebas no llaman a la API real.
+      - name: Instalar dependencias
+        run: pip install requests
+
+      - name: Lanzar la batería de pruebas
+        run: python -m unittest unittests.py -v
+
+# Después, añade esta línea al principio del README (bajo el título):
+#
+# ![tests](https://github.com/m-elass/per26-final-opentargets/actions/workflows/tests.yml/badge.svg)
